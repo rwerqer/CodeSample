@@ -44,9 +44,7 @@
     <li><strong>가독성/문서화</strong> — 퍼블릭 API는 <em>XML Doc</em>, 구현부는 <em>의도/경계 중심 주석</em>으로 유지보수성 강조</li>
   </ul>
 </details>
----
-
-<div align="center">
+<div>
   <ul>코드 주석은 이해를 돕기 위해 AI를 이용하여 보강하였음</ul>
 </div>
 
