@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>점프형 수직 스크롤러</h1>
+  <h1>EchoBetweenUs</h1>
   <p><em>Interfaces · Strategy · Factory+Pooling · Event Channel · Update/FixedUpdate 분리</em></p>
 </div>
 
@@ -44,3 +44,8 @@
     <li><strong>가독성/문서화</strong> — 퍼블릭 API는 <em>XML Doc</em>, 구현부는 <em>의도/경계 중심 주석</em>으로 유지보수성 강조</li>
   </ul>
 </details>
+
+<div align="center">
+  <h2>코드 주석은 이해를 돕기 위해 AI를 이용하여 보강하였음</h2>
+</div>
+
