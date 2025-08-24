@@ -73,19 +73,13 @@
   </ul>
 </details>
 
-<details>
-  <summary><strong>알려진 한계 &amp; 후속 계획(요약)</strong></summary>
-  <ul>
-    <li>UI 슬롯 범위: 보조문서 수 &gt; 슬롯 수일 때 OOB 가능(<code>UIDocumentDisplayManager</code>, <code>UiSupportDocDisplay</code>) → <em>동적 생성/풀링</em>으로 개선.</li>
-    <li>데이터 정합: <code>signatureList</code> ↔ <code>sealList</code> 길이 불일치 시 인덱스 오류 가능 → <em>유효성 검증</em> 추가.</li>
-    <li>중앙값 계산: 위조 로직 일부의 mid 계산 <em>FIXME</em> 반영 필요.</li>
-    <li>의존 해소: 씬 이름 기반 <code>Find</code> 의존(<code>GameLoopManager</code>) → <em>DI/참조 주입</em>으로 내구성 강화.</li>
-    <li>Dictionary 직렬화: <code>ResourceManager</code>의 <code>resources</code>는 인스펙터 비표시 → 에디터 툴/디버그 뷰 고려.</li>
-  </ul>
-</details>
 
 <hr/>
 
 <div align="center">
   <sub>작게 시작해도, <strong>계약과 상태</strong>를 중심에 두면 확장에 강해집니다. — 인터페이스·상태머신·SO 데이터로 현업 친화 구조를 보여줍니다.</sub>
+</div>
+
+<div>
+<ul>코드 주석은 이해를 돕기 위해 AI를 이용하여 보강하였음</ul>
 </div>
