@@ -153,18 +153,19 @@ EndTurn
 ├─ Status.Broadcast(OnTurnEnd) # 예: DecayingDotEffect
 └─ Bus.OnTurnEnd
 
+
 ```mermaid
 flowchart TD
-  A[BeginTurn] -->|Bus.OnTurnStart| B(Status.OnTurnStart Hooks)
-  B --> C[Pending(TurnStart).Commit]
-  C --> D[PlanIntents (Speed Roll Snapshot)]
-  D --> E[Pairing (Clash/OneSided)]
-  E --> F[ExecuteClash/OneSided]
-  F --> G[DispatchDamage via Router]
-  G --> H[ApplyCoinMods (result-based)]
-  H --> I[Pending(TurnEnd).Commit]
-  I -->|Status.OnTurnEnd Hooks (e.g., DecayingDot)| J[EndTurn]
-
+  A[Begin Turn] --> B[Status: OnTurnStart Hooks]
+  B --> C[Pending TurnStart Commit]
+  C --> D[Plan Intents (Speed Roll)]
+  D --> E[Pairing: Clash or One-sided]
+  E --> F[Execute Actions]
+  F --> G[Dispatch Damage via Router]
+  G --> H[Apply Coin Mods]
+  H --> I[Pending TurnEnd Commit]
+  I --> J[Status: OnTurnEnd Hooks]
+  J --> K[End Turn]
 ---
 
 ## 로깅(디버깅)
