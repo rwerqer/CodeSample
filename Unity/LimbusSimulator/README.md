@@ -131,27 +131,27 @@
 
 ## 🔁 한 턴 파이프라인
 BeginTurn
-├─ Bus.OnTurnStart
-├─ Status.Broadcast(OnTurnStart)
-└─ Pending(TurnStart).Commit
+|-- Bus.OnTurnStart
+|-- Status.Broadcast(OnTurnStart)
+`-- Pending(TurnStart).Commit
 
 PlanIntents
-├─ Bus.OnPlanIntentsStart (옵션)
-├─ Status.Broadcast(OnPlanIntentsStart) # IntentDirector 개입
-└─ BuildIntents (Speed Roll Snapshot)
+|-- Bus.OnPlanIntentsStart (optional)
+|-- Status.Broadcast(OnPlanIntentsStart) # IntentDirector
+`-- BuildIntents (Speed Roll Snapshot)
 
 Pair & Execute
-├─ BuildAndPairActions(Clash/OneSided 매칭)
-├─ ExecuteClash/OneSided
-│  ├─ Resolve → ComputeSeries
-│  ├─ DispatchDamage (Router→DamageEffect)
-│  └─ ApplyCoinMods (결과론 모드)
-└─ SkillExecutor(이벤트 파이프라인)
+|-- BuildAndPairActions (Clash / OneSided)
+|-- ExecuteClash / ExecuteOneSided
+|   |-- Resolve -> ComputeSeries
+|   |-- DispatchDamage (Router -> DamageEffect)
+|   `-- ApplyCoinMods (result-based)
+`-- SkillExecutor (event pipeline)
 
 EndTurn
-├─ Pending(TurnEnd).Commit
-├─ Status.Broadcast(OnTurnEnd) # 예: DecayingDotEffect
-└─ Bus.OnTurnEnd
+|-- Pending(TurnEnd).Commit
+|-- Status.Broadcast(OnTurnEnd) # e.g., DecayingDotEffect
+`-- Bus.OnTurnEnd
 
 ---
 
