@@ -130,7 +130,7 @@
 ---
 
 ## 🔁 한 턴 파이프라인
-'''
+\\\
 BeginTurn
 |-- Bus.OnTurnStart
 |-- Status.Broadcast(OnTurnStart)
@@ -153,7 +153,7 @@ EndTurn
 |-- Pending(TurnEnd).Commit
 |-- Status.Broadcast(OnTurnEnd) # e.g., DecayingDotEffect
 `-- Bus.OnTurnEnd
-'''
+\\\
 
 ---
 
