@@ -153,7 +153,7 @@ EndTurn
 |-- Pending(TurnEnd).Commit
 |-- Status.Broadcast(OnTurnEnd) # e.g., DecayingDotEffect
 `-- Bus.OnTurnEnd
-```
+\
 
 ---
 
