@@ -143,9 +143,9 @@ PlanIntents
 Pair & Execute
 ├─ BuildAndPairActions(Clash/OneSided 매칭)
 ├─ ExecuteClash/OneSided
-│ ├─ Resolve → ComputeSeries
-│ ├─ DispatchDamage (Router→DamageEffect)
-│ └─ ApplyCoinMods (결과론 모드)
+│  ├─ Resolve → ComputeSeries
+│  ├─ DispatchDamage (Router→DamageEffect)
+│  └─ ApplyCoinMods (결과론 모드)
 └─ SkillExecutor(이벤트 파이프라인)
 
 EndTurn
@@ -153,19 +153,6 @@ EndTurn
 ├─ Status.Broadcast(OnTurnEnd) # 예: DecayingDotEffect
 └─ Bus.OnTurnEnd
 
-
-```mermaid
-flowchart TD
-  A[Begin Turn] --> B[Status: OnTurnStart Hooks]
-  B --> C[Pending TurnStart Commit]
-  C --> D[Plan Intents (Speed Roll)]
-  D --> E[Pairing: Clash or One-sided]
-  E --> F[Execute Actions]
-  F --> G[Dispatch Damage via Router]
-  G --> H[Apply Coin Mods]
-  H --> I[Pending TurnEnd Commit]
-  I --> J[Status: OnTurnEnd Hooks]
-  J --> K[End Turn]
 ---
 
 ## 로깅(디버깅)
